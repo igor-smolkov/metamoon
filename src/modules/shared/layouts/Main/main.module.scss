@@ -1,0 +1,12 @@
+@import 'shared/scss/variables.scss';
+
+.root {
+  min-width: $min-width;
+  max-width: $max-width;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.main {
+  width: 100%;
+}
