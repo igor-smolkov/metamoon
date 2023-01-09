@@ -1,6 +1,11 @@
 @import 'shared/scss/variables.scss';
 
 .root {
+  width: 100%;
+  background-color: #000;
+}
+
+.page {
   min-width: $min-width;
   max-width: $max-width;
   width: 100%;

@@ -1,2 +1,13 @@
 $min-width: 320px;
 $max-width: 1440px;
+
+$font-main: var(--font-main);
+
+$color-text-main: #fff;
+$color-text-invert: #000;
+
+$color-bg-main: #000;
+$color-bg-invert: #fff;
+$color-bg-panel: #d7b7ff;
+
+$gradient-panel: linear-gradient(79.01deg, $color-bg-panel, $color-bg-panel 50%, $color-bg-invert 100%);

@@ -10,7 +10,7 @@ type StaticProps = {};
 const Home: NextPageWithLayout<StaticProps> = () => (
   <>
     <Head>
-      <title>Home</title>
+      <title>To the MetaMoon</title>
     </Head>
     <div className={styles.root}>Home page</div>
   </>
