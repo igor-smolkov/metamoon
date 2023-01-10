@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+*::selection {
+  background-color: $color-bg-panel-light;
+}
+
 html,
 body,
 #__next {
