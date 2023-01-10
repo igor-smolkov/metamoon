@@ -12,3 +12,19 @@
     text-decoration: underline;
   }
 }
+
+.typeSepia {
+  transition: filter ease-out 0.2s;
+
+  &:hover {
+    filter: sepia(100%);
+  }
+}
+
+.typeRotate {
+  transition: transform ease-out 0.2s;
+
+  &:hover {
+    transform: rotate(5deg);
+  }
+}

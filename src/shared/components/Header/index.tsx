@@ -7,7 +7,7 @@ import styles from './header.module.scss';
 
 const Header: FC = () => (
   <header className={styles.root}>
-    <Link href="/">
+    <Link href="/" hoverType="rotate">
       <Logo />
     </Link>
     <div className={styles.content}>

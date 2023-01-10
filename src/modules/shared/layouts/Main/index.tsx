@@ -2,7 +2,7 @@ import { FC, PropsWithChildren } from 'react';
 import { Montserrat } from '@next/font/google';
 import cn from 'classnames';
 
-import { Header } from 'shared/components';
+import { Footer, Header } from 'shared/components';
 
 import styles from './main.module.scss';
 
@@ -15,6 +15,7 @@ const Main: FC<PropsWithChildren<Props>> = ({ children }) => (
     <div className={styles.page}>
       <Header />
       <main className={styles.main}>{children}</main>
+      <Footer />
     </div>
   </div>
 );
