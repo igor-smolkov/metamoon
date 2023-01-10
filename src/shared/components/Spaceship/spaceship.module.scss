@@ -1,0 +1,50 @@
+@keyframes turn {
+  0% {
+    transform: scale(1, 1) rotate(0deg);
+  }
+
+  50% {
+    transform: scale(-1, 1) rotate(-90deg);
+  }
+}
+
+.root {
+  position: relative;
+  min-width: 50px;
+  aspect-ratio: 20 / 21;
+}
+
+.fire {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 46.25%;
+  height: 52.38%;
+  background-image: url('./images/fire.svg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  animation: turn infinite 0.2s step-end;
+}
+
+.ship {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 98.25%;
+  height: 93.57%;
+  background-image: url('./images/spaceship.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.pilot {
+  position: absolute;
+  top: 31.8%;
+  right: 33.6%;
+  width: 9.25%;
+  height: 8.81%;
+  background-image: url('./images/pilot.svg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  animation: turn infinite 2s step-end;
+}
