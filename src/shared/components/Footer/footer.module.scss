@@ -16,5 +16,6 @@
   min-height: 50px;
   padding: 2px 40px;
   background-color: $color-bg-panel-light;
+  backdrop-filter: blur(6px);
   border-radius: 20px;
 }
