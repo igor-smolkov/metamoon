@@ -23,3 +23,19 @@
     background-position: 100% 0;
   }
 }
+
+.themeGroup {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 25px;
+  min-height: 64px;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 140%;
+  text-transform: capitalize;
+
+  > :first-child {
+    align-self: center;
+  }
+}
