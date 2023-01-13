@@ -6,3 +6,4 @@ export { Footer } from './Footer';
 export { Spaceship } from './Spaceship';
 export { Portal } from './Portal';
 export { Modal } from './Modal';
+export { TextField } from './TextField';

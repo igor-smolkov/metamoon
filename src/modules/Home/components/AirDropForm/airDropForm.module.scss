@@ -1,0 +1,39 @@
+@import 'shared/scss/variables.scss';
+
+.root {
+  width: 660px;
+  padding: 40px 60px 70px;
+}
+
+.title {
+  font-family: $font-main;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  color: $color-text-main;
+}
+
+.text {
+  margin-top: 6px;
+  font-family: $font-main;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: $color-text-main;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 350px;
+  margin: 0 auto;
+  margin-top: 30px;
+
+  > :last-child {
+    align-self: center;
+    max-width: 254px;
+  }
+}

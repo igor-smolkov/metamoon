@@ -1,0 +1,30 @@
+@import 'shared/scss/variables.scss';
+
+.root {
+  width: 100%;
+  min-height: 50px;
+  padding: 10px 20px;
+  font-family: $font-main;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: $color-text-main;
+  background-color: $color-bg-main;
+  border: 1px solid $color-border;
+  border-radius: 20px;
+  transition: border-color ease-out 0.2s;
+
+  &::placeholder {
+    color: $color-text-main;
+  }
+
+  &:focus {
+    border-color: $color-text-main;
+  }
+}
+
+.textarea {
+  min-height: 154px;
+  resize: none;
+}

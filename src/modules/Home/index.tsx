@@ -5,13 +5,14 @@ import { Button, Logo, Modal } from 'shared/components';
 import { NextPageWithLayout } from 'shared/types';
 
 import { Main } from '../shared';
-import { ConnectWalletPanel } from './components';
+import { AirDropForm, ConnectWalletPanel } from './components';
 import styles from './home.module.scss';
 
 type StaticProps = {};
 
 const Home: NextPageWithLayout<StaticProps> = () => {
   const [showConnectModal, setShowConnectModal] = useState(false);
+  const [showAirDropModal, setShowAirDropModal] = useState(false);
 
   return (
     <>
@@ -38,7 +39,10 @@ const Home: NextPageWithLayout<StaticProps> = () => {
           <Modal isOpen={showConnectModal} onClose={() => setShowConnectModal(false)}>
             <ConnectWalletPanel />
           </Modal>
-          <Button>Get whitelisted for airdrop</Button>
+          <Button onClick={() => setShowAirDropModal(true)}>Get whitelisted for airdrop</Button>
+          <Modal isOpen={showAirDropModal} onClose={() => setShowAirDropModal(false)}>
+            <AirDropForm />
+          </Modal>
         </div>
       </div>
     </>

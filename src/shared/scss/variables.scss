@@ -12,4 +12,6 @@ $color-bg-invert: #fff;
 $color-bg-panel: #d7b7ff;
 $color-bg-panel-light: rgba(215 183 255 / 70%);
 
+$color-border: $color-bg-panel;
+
 $gradient-panel: linear-gradient(79.01deg, $color-bg-panel, $color-bg-panel 50%, $color-bg-invert 100%);
