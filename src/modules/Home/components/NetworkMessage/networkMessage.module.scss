@@ -2,7 +2,7 @@
 
 .root {
   width: 660px;
-  padding: 40px 60px;
+  padding: 40px 60px 44px;
 }
 
 .title {
@@ -15,7 +15,8 @@
 }
 
 .text {
-  margin-top: 6px;
+  max-width: 520px;
+  margin-top: 32px;
   font-family: $font-main;
   font-style: normal;
   font-weight: 500;
@@ -24,16 +25,8 @@
   color: $color-text-main;
 }
 
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  max-width: 350px;
+.button {
+  max-width: 384px;
   margin: 0 auto;
-  margin-top: 30px;
-
-  > :last-child {
-    align-self: center;
-    max-width: 254px;
-  }
+  margin-top: 58px;
 }

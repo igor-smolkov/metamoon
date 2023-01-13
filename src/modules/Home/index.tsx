@@ -1,11 +1,11 @@
 import Head from 'next/head';
-import { FormEvent, useState } from 'react';
+import { FormEvent, useEffect, useState } from 'react';
 
 import { Button, Logo, Modal } from 'shared/components';
 import { NextPageWithLayout } from 'shared/types';
 
 import { Main } from '../shared';
-import { AirDropForm, ConnectWalletPanel, ParticipatingMessage } from './components';
+import { AirDropForm, ConnectWalletPanel, NetworkMessage, ParticipatingMessage } from './components';
 import styles from './home.module.scss';
 
 type StaticProps = {};
@@ -14,12 +14,17 @@ const Home: NextPageWithLayout<StaticProps> = () => {
   const [showConnectModal, setShowConnectModal] = useState(false);
   const [showAirDropModal, setShowAirDropModal] = useState(false);
   const [showParticipatingModal, setShowParticipatingModal] = useState(false);
+  const [showNetworkModal, setShowNetworkModal] = useState(false);
 
   const handleAirDropFormSubmit = (event: FormEvent) => {
     event.preventDefault();
     setShowAirDropModal(false);
     setShowParticipatingModal(true);
   };
+
+  useEffect(() => {
+    setTimeout(() => setShowNetworkModal(true), 2000);
+  }, []);
 
   return (
     <>
@@ -54,6 +59,9 @@ const Home: NextPageWithLayout<StaticProps> = () => {
             <ParticipatingMessage />
           </Modal>
         </div>
+        <Modal isOpen={showNetworkModal} onClose={() => setShowNetworkModal(false)}>
+          <NetworkMessage />
+        </Modal>
       </div>
     </>
   );
