@@ -1,15 +1,11 @@
 import { FC } from 'react';
 import NextImage from 'next/image';
-import { Montserrat } from '@next/font/google';
-import cn from 'classnames';
 
 import { Button } from 'shared/components';
 import styles from './connectWalletPanel.module.scss';
 
-const montserrat = Montserrat({ subsets: ['latin', 'cyrillic'], weight: ['400', '500'], variable: '--font-main' });
-
 const ConnectWalletPanel: FC = () => (
-  <section className={cn(styles.root, montserrat.variable)}>
+  <section className={styles.root}>
     <h2 className={styles.title}>Connect wallet</h2>
     <div className={styles.buttons}>
       <Button theme="group">

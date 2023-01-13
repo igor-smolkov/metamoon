@@ -26,7 +26,7 @@ const Home: NextPageWithLayout<StaticProps> = () => {
             <span className={styles.logoContainer}>
               e
               <span className={styles.logo}>
-                <Logo fontSize={90} />
+                <Logo fontSize={100} />
               </span>
             </span>
             taMoon

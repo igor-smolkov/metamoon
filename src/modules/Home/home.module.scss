@@ -12,8 +12,8 @@
   font-family: $font-main;
   font-style: normal;
   font-weight: 500;
-  font-size: 90px;
-  line-height: 112px;
+  font-size: 100px;
+  line-height: 122px;
   color: $color-text-main;
 }
 
@@ -32,7 +32,7 @@
 
 .logo {
   position: absolute;
-  bottom: -20px;
+  bottom: -22px;
   left: 2px;
   max-width: 69px;
   cursor: text;
@@ -43,13 +43,13 @@
   font-family: $font-main;
   font-style: normal;
   font-weight: 500;
-  font-size: 22px;
-  line-height: 27px;
+  font-size: 24px;
+  line-height: 29px;
   color: $color-text-main;
 }
 
 .buttons {
-  max-width: 545px;
+  max-width: 586px;
   display: grid;
   grid-template-columns: auto auto;
   gap: 20px;
