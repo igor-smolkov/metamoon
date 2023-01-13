@@ -1,11 +1,11 @@
 import Head from 'next/head';
-import { useState } from 'react';
+import { FormEvent, useState } from 'react';
 
 import { Button, Logo, Modal } from 'shared/components';
 import { NextPageWithLayout } from 'shared/types';
 
 import { Main } from '../shared';
-import { AirDropForm, ConnectWalletPanel } from './components';
+import { AirDropForm, ConnectWalletPanel, ParticipatingMessage } from './components';
 import styles from './home.module.scss';
 
 type StaticProps = {};
@@ -13,6 +13,13 @@ type StaticProps = {};
 const Home: NextPageWithLayout<StaticProps> = () => {
   const [showConnectModal, setShowConnectModal] = useState(false);
   const [showAirDropModal, setShowAirDropModal] = useState(false);
+  const [showParticipatingModal, setShowParticipatingModal] = useState(false);
+
+  const handleAirDropFormSubmit = (event: FormEvent) => {
+    event.preventDefault();
+    setShowAirDropModal(false);
+    setShowParticipatingModal(true);
+  };
 
   return (
     <>
@@ -41,7 +48,10 @@ const Home: NextPageWithLayout<StaticProps> = () => {
           </Modal>
           <Button onClick={() => setShowAirDropModal(true)}>Get whitelisted for airdrop</Button>
           <Modal isOpen={showAirDropModal} onClose={() => setShowAirDropModal(false)}>
-            <AirDropForm />
+            <AirDropForm onSubmit={handleAirDropFormSubmit} />
+          </Modal>
+          <Modal isOpen={showParticipatingModal} onClose={() => setShowParticipatingModal(false)}>
+            <ParticipatingMessage />
           </Modal>
         </div>
       </div>

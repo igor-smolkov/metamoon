@@ -1,10 +1,10 @@
-import { FC } from 'react';
+import { FC, FormEvent } from 'react';
 
 import { Button, TextField } from 'shared/components';
 import styles from './airDropForm.module.scss';
 
 type Props = {
-  onSubmit?: () => void;
+  onSubmit?: (event: FormEvent) => void;
 };
 
 const AirDropForm: FC<Props> = ({ onSubmit }) => (

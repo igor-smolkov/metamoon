@@ -13,6 +13,14 @@
   }
 }
 
+.typeUnderlineInverted {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 .typeSepia {
   transition: filter ease-out 0.2s;
 

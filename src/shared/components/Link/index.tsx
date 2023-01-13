@@ -7,13 +7,21 @@ import styles from './link.module.scss';
 type Props = {
   href: string;
   isExternal?: boolean;
+  isHoverInverted?: boolean;
   hoverType?: 'underline' | 'sepia' | 'rotate';
 };
 
-const Link: FC<PropsWithChildren<Props>> = ({ href, children, isExternal = false, hoverType = 'underline' }) => {
+const Link: FC<PropsWithChildren<Props>> = ({
+  href,
+  children,
+  isExternal = false,
+  isHoverInverted = false,
+  hoverType = 'underline',
+}) => {
   const className = cn(styles.root, {
-    [styles.typeSepia]: hoverType === 'sepia',
-    [styles.typeRotate]: hoverType === 'rotate',
+    [styles.typeUnderlineInverted]: hoverType === 'underline' && isHoverInverted,
+    [styles.typeSepia]: hoverType === 'sepia' && !isHoverInverted,
+    [styles.typeRotate]: hoverType === 'rotate' && !isHoverInverted,
   });
 
   return isExternal ? (
