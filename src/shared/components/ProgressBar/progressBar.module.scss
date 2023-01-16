@@ -1,0 +1,22 @@
+@import 'shared/scss/variables.scss';
+
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 50px;
+  padding: 10px;
+  background-color: $color-bg-main;
+  border-radius: 20px;
+}
+
+.label {
+  font-family: $font-main;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: $color-text-main;
+  mix-blend-mode: difference;
+}

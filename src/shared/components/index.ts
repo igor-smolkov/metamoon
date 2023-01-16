@@ -8,3 +8,4 @@ export { Portal } from './Portal';
 export { Modal } from './Modal';
 export { TextField } from './TextField';
 export { PopperButton } from './PopperButton';
+export { ProgressBar } from './ProgressBar';
