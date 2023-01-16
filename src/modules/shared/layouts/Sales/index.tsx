@@ -9,7 +9,7 @@ type Props = {};
 const Sales: FC<PropsWithChildren<Props>> = ({ children }) => (
   <div className={styles.root}>
     <div className={styles.page}>
-      <Header />
+      <Header accAddress="0x1f...as59t3" />
       <main className={styles.main}>{children}</main>
       <Footer />
     </div>

@@ -1,0 +1,20 @@
+@keyframes fade-in {
+  from {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+.root {
+  position: relative;
+}
+
+.popper {
+  position: absolute;
+  top: calc(100% + 14px);
+  right: 0;
+  width: max-content;
+  opacity: 1;
+  z-index: 10;
+  animation: fade-in ease-out 0.2s;
+}

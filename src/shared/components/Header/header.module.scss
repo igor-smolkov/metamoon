@@ -21,6 +21,7 @@
 }
 
 .button {
-  width: 100%;
-  max-width: 216px;
+  display: flex;
+  justify-content: flex-end;
+  min-width: 216px;
 }
