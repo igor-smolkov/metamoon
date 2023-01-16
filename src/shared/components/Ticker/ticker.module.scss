@@ -1,0 +1,35 @@
+@import 'shared/scss/variables.scss';
+
+@keyframes scroll {
+  from {
+    transform: translateX(0%);
+  }
+}
+
+.root {
+  max-width: 100%;
+  min-height: 50px;
+  background-color: $color-bg-main;
+  overflow: hidden;
+}
+
+.ticker {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  width: max-content;
+  background-color: $color-bg-main;
+  animation: scroll linear infinite;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+.tickerItem {
+  flex-shrink: 0;
+
+  &:first-child {
+    padding-left: 100px;
+  }
+}

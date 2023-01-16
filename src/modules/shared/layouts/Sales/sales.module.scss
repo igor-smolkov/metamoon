@@ -11,11 +11,18 @@
 .page {
   display: flex;
   flex-direction: column;
-  min-width: $min-width;
-  max-width: $max-width;
-  width: 100%;
   min-height: 100%;
+}
+
+.contentWrapper {
+  min-width: $min-width;
+  width: 100%;
+  max-width: $max-width;
   margin: 0 auto;
+
+  &:first-child {
+    flex: 1 0 auto;
+  }
 }
 
 .progressBar {
@@ -23,6 +30,9 @@
 }
 
 .main {
-  flex: 1 0 auto;
   width: 100%;
+}
+
+.ticker {
+  padding: 60px 0 94px;
 }
