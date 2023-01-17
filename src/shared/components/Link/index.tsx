@@ -8,6 +8,7 @@ type Props = {
   href: string;
   isExternal?: boolean;
   isHoverInverted?: boolean;
+  isCurrent?: boolean;
   hoverType?: 'underline' | 'sepia' | 'rotate';
 };
 
@@ -16,22 +17,30 @@ const Link: FC<PropsWithChildren<Props>> = ({
   children,
   isExternal = false,
   isHoverInverted = false,
+  isCurrent = false,
   hoverType = 'underline',
 }) => {
   const className = cn(styles.root, {
     [styles.typeUnderlineInverted]: hoverType === 'underline' && isHoverInverted,
-    [styles.typeSepia]: hoverType === 'sepia' && !isHoverInverted,
-    [styles.typeRotate]: hoverType === 'rotate' && !isHoverInverted,
+    [styles.typeUnderlineCurrent]: hoverType === 'underline' && isCurrent,
+    [styles.typeSepia]: hoverType === 'sepia',
+    [styles.typeRotate]: hoverType === 'rotate',
   });
 
-  return isExternal ? (
-    <a className={className} href={href} target="_blank" rel="noopener noreferrer">
-      {children}
-    </a>
+  return isCurrent ? (
+    <span className={className}>{children}</span>
   ) : (
-    <NextLink className={className} href={href}>
-      {children}
-    </NextLink>
+    <>
+      {isExternal ? (
+        <a className={className} href={href} target="_blank" rel="noopener noreferrer">
+          {children}
+        </a>
+      ) : (
+        <NextLink className={className} href={href}>
+          {children}
+        </NextLink>
+      )}
+    </>
   );
 };
 

@@ -21,6 +21,15 @@
   }
 }
 
+.typeUnderlineCurrent {
+  text-decoration: underline;
+  cursor: default;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .typeSepia {
   transition: filter ease-out 0.2s;
 

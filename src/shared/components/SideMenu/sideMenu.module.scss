@@ -1,0 +1,35 @@
+@import 'shared/scss/variables.scss';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  list-style: none;
+}
+
+.item {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  min-height: 62px;
+  max-width: max-content;
+  font-size: 40px;
+  line-height: 49px;
+}
+
+.status {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  min-width: max-content;
+  min-height: 26px;
+  padding: 5px 20px;
+  font-size: 13px;
+  line-height: 16px;
+  border: 1px solid $color-element-main;
+  border-radius: 10px;
+}
+
+.statusAvailable {
+  border: 1px solid $color-element-complementary;
+}
