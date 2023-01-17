@@ -11,3 +11,5 @@ export { PopperButton } from './PopperButton';
 export { ProgressBar } from './ProgressBar';
 export { Ticker } from './Ticker';
 export { SideMenu } from './SideMenu';
+export { Box } from './Box';
+export { PageMessage } from './PageMessage';

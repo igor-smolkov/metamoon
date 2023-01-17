@@ -3,15 +3,12 @@
 .root {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 36px;
   list-style: none;
 }
 
 .item {
-  display: flex;
-  align-items: flex-end;
   position: relative;
-  min-height: 62px;
   max-width: max-content;
   font-size: 40px;
   line-height: 49px;
@@ -19,7 +16,7 @@
 
 .status {
   position: absolute;
-  top: 0;
+  top: -12px;
   left: 100%;
   min-width: max-content;
   min-height: 26px;

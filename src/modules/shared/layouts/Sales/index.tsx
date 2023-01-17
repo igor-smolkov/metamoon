@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { FC, PropsWithChildren } from 'react';
 
-import { Footer, Header, ProgressBar, SideMenu, Ticker } from 'shared/components';
+import { Box, Footer, Header, ProgressBar, SideMenu, Ticker } from 'shared/components';
 import { routes } from 'shared/constants';
 
 import styles from './sales.module.scss';
@@ -42,7 +42,10 @@ const Sales: FC<PropsWithChildren<Props>> = ({ children }) => {
                 },
               ]}
             />
-            <main className={styles.main}>{children}</main>
+            <div className={styles.boxWrapper}>
+              <main className={styles.main}>{children}</main>
+              <Box />
+            </div>
           </div>
         </div>
         <div className={styles.ticker}>

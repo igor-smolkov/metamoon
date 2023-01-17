@@ -35,6 +35,12 @@
   padding: 0 32px;
 }
 
+.boxWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 .main {
   width: 100%;
 }

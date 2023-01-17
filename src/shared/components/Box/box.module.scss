@@ -1,0 +1,9 @@
+@import 'shared/scss/variables.scss';
+
+.root {
+  width: 182px;
+  height: 182px;
+  aspect-ratio: 1 / 1;
+  background: $color-bg-default;
+  border-radius: 20px;
+}
