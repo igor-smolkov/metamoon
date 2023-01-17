@@ -1,24 +1,23 @@
 import Head from 'next/head';
-import { FormEvent, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
-import { Button, Logo, Modal } from 'shared/components';
+import { Button, Logo, Modal, ToWhitelistForm, ConnectButtons } from 'shared/components';
 import { NextPageWithLayout } from 'shared/types';
 
-import { Main } from '../shared';
-import { AirDropForm, ConnectWalletPanel, NetworkMessage, ParticipatingMessage } from './components';
+import { Main } from '../shared/layouts';
+import { ConnectWalletMessage, NetworkMessage, ParticipatingMessage, ToWhitelistMessage } from '../shared/components';
 import styles from './home.module.scss';
 
 type StaticProps = {};
 
 const Home: NextPageWithLayout<StaticProps> = () => {
   const [showConnectModal, setShowConnectModal] = useState(false);
-  const [showAirDropModal, setShowAirDropModal] = useState(false);
+  const [showToWhitelistModal, setShowToWhitelistModal] = useState(false);
   const [showParticipatingModal, setShowParticipatingModal] = useState(false);
   const [showNetworkModal, setShowNetworkModal] = useState(false);
 
-  const handleAirDropFormSubmit = (event: FormEvent) => {
-    event.preventDefault();
-    setShowAirDropModal(false);
+  const handleToWhitelistFormSubmit = () => {
+    setShowToWhitelistModal(false);
     setShowParticipatingModal(true);
   };
 
@@ -49,11 +48,15 @@ const Home: NextPageWithLayout<StaticProps> = () => {
         <div className={styles.buttons}>
           <Button onClick={() => setShowConnectModal(true)}>Connect wallet</Button>
           <Modal isOpen={showConnectModal} onClose={() => setShowConnectModal(false)}>
-            <ConnectWalletPanel />
+            <ConnectWalletMessage>
+              <ConnectButtons />
+            </ConnectWalletMessage>
           </Modal>
-          <Button onClick={() => setShowAirDropModal(true)}>Get whitelisted for airdrop</Button>
-          <Modal isOpen={showAirDropModal} onClose={() => setShowAirDropModal(false)}>
-            <AirDropForm onSubmit={handleAirDropFormSubmit} />
+          <Button onClick={() => setShowToWhitelistModal(true)}>Get whitelisted for airdrop</Button>
+          <Modal isOpen={showToWhitelistModal} onClose={() => setShowToWhitelistModal(false)}>
+            <ToWhitelistMessage isExternal>
+              <ToWhitelistForm onSubmit={handleToWhitelistFormSubmit} />
+            </ToWhitelistMessage>
           </Modal>
           <Modal isOpen={showParticipatingModal} onClose={() => setShowParticipatingModal(false)}>
             <ParticipatingMessage />

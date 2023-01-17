@@ -13,3 +13,6 @@ export { Ticker } from './Ticker';
 export { SideMenu } from './SideMenu';
 export { Box } from './Box';
 export { PageMessage } from './PageMessage';
+export { ToWhitelistForm } from './ToWhitelistForm';
+export { ModalMessage } from './ModalMessage';
+export { ConnectButtons } from './ConnectButtons';

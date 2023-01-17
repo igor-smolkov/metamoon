@@ -1,11 +1,11 @@
-import { FC, ReactElement, ReactNode } from 'react';
+import { FC, ReactNode } from 'react';
 
 import styles from './pageMessage.module.scss';
 
 type Props = {
   title: string;
   textContent: ReactNode;
-  button?: ReactElement;
+  button?: ReactNode;
 };
 
 const PageMessage: FC<Props> = ({ title, textContent, button }) => (
