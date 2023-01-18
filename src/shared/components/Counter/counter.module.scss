@@ -1,0 +1,53 @@
+@import 'shared/scss/variables.scss';
+
+.root {
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: 0;
+  fill: $color-text-main;
+  transition: fill ease-out 0.2s;
+  cursor: pointer;
+
+  &:last-child {
+    margin-left: 12px;
+  }
+
+  &:first-child:hover {
+    fill: $color-element-main;
+  }
+
+  &:last-child:hover {
+    fill: $color-element-complementary;
+  }
+
+  &:disabled {
+    fill: $color-text-invert;
+    cursor: default;
+
+    &:hover {
+      fill: $color-text-invert;
+    }
+  }
+}
+
+.value {
+  display: flex;
+  justify-content: flex-end;
+  min-width: 40px;
+  margin-left: 8px;
+  font-family: $font-main;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: $color-text-main;
+}

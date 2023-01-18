@@ -1,4 +1,4 @@
-export { Logo, Close } from './svg';
+export { Logo, Close, ArrowUp, ArrowDown } from './svg';
 export { Header } from './Header';
 export { Link } from './Link';
 export { Button } from './Button';
@@ -17,3 +17,5 @@ export { ToWhitelistForm } from './ToWhitelistForm';
 export { ModalMessage } from './ModalMessage';
 export { ConnectButtons } from './ConnectButtons';
 export { Label } from './Label';
+export { Bill } from './Bill';
+export { Counter } from './Counter';

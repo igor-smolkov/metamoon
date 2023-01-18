@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react';
+import { FC, PropsWithChildren, ReactNode } from 'react';
 import cn from 'classnames';
 
 import styles from './pageMessage.module.scss';
@@ -12,7 +12,8 @@ type Props = {
   isTitleBold?: boolean;
 };
 
-const PageMessage: FC<Props> = ({
+const PageMessage: FC<PropsWithChildren<Props>> = ({
+  children,
   title = '',
   text = '',
   titleContent = null,
@@ -28,6 +29,7 @@ const PageMessage: FC<Props> = ({
       {titleContent !== null && <div className={titleClassName}>{titleContent}</div>}
       {text !== '' && <p className={styles.text}>{text}</p>}
       {textContent !== null && <div className={styles.text}>{textContent}</div>}
+      {children && <div className={styles.content}>{children}</div>}
       {button !== null && <div className={styles.button}>{button}</div>}
     </section>
   );
