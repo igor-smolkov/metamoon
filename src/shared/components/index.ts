@@ -19,3 +19,4 @@ export { ConnectButtons } from './ConnectButtons';
 export { Label } from './Label';
 export { Bill } from './Bill';
 export { Counter } from './Counter';
+export { SubscribeForm } from './SubscribeForm';
