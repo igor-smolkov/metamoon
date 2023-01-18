@@ -33,15 +33,12 @@ const AirDrop: NextPageWithLayout = () => {
             </>
           }
           button={<Button>Claim NFT</Button>}
+          isTitleBold
         />
       ) : (
         <PageMessage
           title="You&rsquo;re not whitelisted yet :("
-          textContent={
-            <>
-              <p>To participate in AirDrop please send us an information about your project</p>
-            </>
-          }
+          text="To participate in AirDrop please send us an information about your project"
           button={
             <>
               <Button onClick={() => setShowToWhitelistModal(true)}>Get whitelisted</Button>
@@ -55,6 +52,7 @@ const AirDrop: NextPageWithLayout = () => {
               </Modal>
             </>
           }
+          isTitleBold
         />
       )}
     </>

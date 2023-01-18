@@ -9,10 +9,14 @@
 .title {
   font-family: $font-main;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 40px;
   line-height: 49px;
   color: $color-text-main;
+}
+
+.titleBold {
+  font-weight: 600;
 }
 
 .text {

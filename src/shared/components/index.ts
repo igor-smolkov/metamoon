@@ -16,3 +16,4 @@ export { PageMessage } from './PageMessage';
 export { ToWhitelistForm } from './ToWhitelistForm';
 export { ModalMessage } from './ModalMessage';
 export { ConnectButtons } from './ConnectButtons';
+export { Label } from './Label';

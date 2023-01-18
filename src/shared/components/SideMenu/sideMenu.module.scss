@@ -8,25 +8,5 @@
 }
 
 .item {
-  position: relative;
-  max-width: max-content;
-  font-size: 40px;
-  line-height: 49px;
-}
-
-.status {
-  position: absolute;
-  top: -12px;
-  left: 100%;
-  min-width: max-content;
-  min-height: 26px;
-  padding: 5px 20px;
-  font-size: 13px;
-  line-height: 16px;
-  border: 1px solid $color-element-main;
-  border-radius: 10px;
-}
-
-.statusAvailable {
-  border: 1px solid $color-element-complementary;
+  font-size: 24px;
 }

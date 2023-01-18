@@ -1,0 +1,30 @@
+@import 'shared/scss/variables.scss';
+
+.root {
+  position: relative;
+  max-width: max-content;
+  font-family: $font-main;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 49px;
+  color: $color-text-main;
+}
+
+.status {
+  position: absolute;
+  top: -12px;
+  left: calc(100% + 6px);
+  min-width: max-content;
+  min-height: 26px;
+  padding: 5px 20px;
+  font-size: 13px;
+  line-height: 16px;
+  border: 1px solid $color-element-main;
+  border-radius: 10px;
+  cursor: default;
+}
+
+.statusAvailable {
+  border: 1px solid $color-element-complementary;
+}

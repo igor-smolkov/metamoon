@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import cn from 'classnames';
 
 import { Link } from '../Link';
+import { Label } from '../Label';
 import styles from './sideMenu.module.scss';
 
 type Props = {
@@ -18,8 +18,9 @@ const SideMenu: FC<Props> = ({ links }) => (
     {links.map(({ label, href, status, isCurrent }) => (
       <li key={href} className={styles.item}>
         <Link href={href} isCurrent={isCurrent}>
-          {label}
-          <span className={cn(styles.status, { [styles.statusAvailable]: status === 'Available now' })}>{status}</span>
+          <Label status={status} isAvailable={status === 'Available now'}>
+            {label}
+          </Label>
         </Link>
       </li>
     ))}
