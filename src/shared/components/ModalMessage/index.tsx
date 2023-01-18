@@ -5,16 +5,24 @@ import styles from './modalMessage.module.scss';
 
 type Props = {
   title: string;
-  textContent?: ReactNode;
-  button?: ReactNode;
+  text?: string;
+  textContent?: ReactNode | null;
+  button?: ReactNode | null;
 };
 
-const ModalMessage: FC<PropsWithChildren<Props>> = ({ title, textContent, button, children }) => (
+const ModalMessage: FC<PropsWithChildren<Props>> = ({
+  title,
+  children,
+  text = '',
+  textContent = null,
+  button = null,
+}) => (
   <section className={cn(styles.root, { [styles.spaced]: textContent && !button && !children })}>
     <h2 className={styles.title}>{title}</h2>
-    {textContent && <div className={styles.text}>{textContent}</div>}
+    {text !== '' && <p className={styles.text}>{text}</p>}
+    {textContent !== null && <div className={cn(styles.text, styles.textMultiline)}>{textContent}</div>}
     {children && <div className={styles.content}>{children}</div>}
-    {button && <div className={styles.button}>{button}</div>}
+    {button !== null && <div className={styles.button}>{button}</div>}
   </section>
 );
 

@@ -23,9 +23,6 @@
 }
 
 .text {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
   margin-top: 18px;
   font-family: $font-main;
   font-style: normal;
@@ -33,6 +30,12 @@
   font-size: 24px;
   line-height: 29px;
   color: $color-text-main;
+}
+
+.textMultiline {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .content {
