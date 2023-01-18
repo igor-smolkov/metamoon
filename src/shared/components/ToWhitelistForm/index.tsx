@@ -16,9 +16,9 @@ const ToWhitelistForm: FC<Props> = ({ onSubmit }) => {
 
   return (
     <form className={styles.root} onSubmit={handleSubmit}>
-      <TextField placeholder="Contacts" name="contacts" />
-      <TextField placeholder="Wallet address" name="wallet-address" />
-      <TextField placeholder="Project info" type="textarea" name="project-info" />
+      <TextField placeholder="Contacts" name="contacts" onChange={() => {}} />
+      <TextField placeholder="Wallet address" name="wallet-address" onChange={() => {}} />
+      <TextField placeholder="Project info" type="textarea" name="project-info" onChange={() => {}} />
       <Button type="submit">Send</Button>
     </form>
   );

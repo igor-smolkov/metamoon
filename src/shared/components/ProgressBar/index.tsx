@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { gradientTransitionLength } from './constants';
+import { animationPosFactor, gradientTransitionLength } from './constants';
 import styles from './progressBar.module.scss';
 
 type Props = {
@@ -9,8 +9,8 @@ type Props = {
 };
 
 const ProgressBar: FC<Props> = ({ progress, label = '' }) => {
-  let startTransitionBP = progress - gradientTransitionLength / 2;
-  let endTransitionBP = progress + gradientTransitionLength / 2;
+  let startTransitionBP = (progress - gradientTransitionLength / 2) / animationPosFactor;
+  let endTransitionBP = (progress + gradientTransitionLength / 2) / animationPosFactor;
 
   if (progress <= 0) {
     startTransitionBP = 0;
@@ -18,8 +18,8 @@ const ProgressBar: FC<Props> = ({ progress, label = '' }) => {
   }
 
   if (progress >= 100) {
-    startTransitionBP = 100;
-    endTransitionBP = 100;
+    startTransitionBP = 100 / animationPosFactor;
+    endTransitionBP = 100 / animationPosFactor;
   }
 
   return (

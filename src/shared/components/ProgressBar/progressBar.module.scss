@@ -1,5 +1,11 @@
 @import 'shared/scss/variables.scss';
 
+@keyframes load {
+  from {
+    background-position: 100%;
+  }
+}
+
 .root {
   display: flex;
   justify-content: center;
@@ -8,7 +14,9 @@
   min-height: 50px;
   padding: 10px;
   background-color: $color-bg-main;
+  background-size: 200%;
   border-radius: 20px;
+  animation: load ease-out 1.5s;
 }
 
 .label {

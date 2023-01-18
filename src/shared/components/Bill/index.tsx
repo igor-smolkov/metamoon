@@ -13,7 +13,7 @@ type Props = {
 const Bill: FC<Props> = ({ list }) => (
   <ul className={styles.root}>
     {list.map(({ label, amount, amountContent }) => (
-      <li className={styles.item}>
+      <li className={styles.item} key={label}>
         <p>{label}</p>
         {amount && <p>{amount}</p>}
         {amountContent && <div>{amountContent}</div>}

@@ -16,7 +16,7 @@ const SubscribeForm: FC<Props> = ({ onSubmit }) => {
 
   return (
     <form className={styles.root} onSubmit={handleSubmit}>
-      <TextField placeholder="Email" name="email" type="email" />
+      <TextField placeholder="Email" name="email" type="email" onChange={() => {}} />
       <Button type="submit">Subscribe</Button>
     </form>
   );

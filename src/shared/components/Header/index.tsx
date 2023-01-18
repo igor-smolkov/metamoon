@@ -31,7 +31,7 @@ const Header: FC<Props> = ({ accAddress = '' }) => (
             <Button collapse="top">Disconnect</Button>
           </PopperButton>
         ) : (
-          <Button>Connect wallet</Button>
+          <Button href="/airdrop">Connect wallet</Button>
         )}
       </div>
     </div>

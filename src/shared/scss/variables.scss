@@ -19,4 +19,4 @@ $color-bg-default: #d9d9d9;
 $color-border: $color-bg-panel;
 
 $gradient-panel: linear-gradient(79.01deg, $color-bg-panel, $color-bg-panel 50%, $color-bg-invert 100%);
-$gradient-page: linear-gradient(to right, #000, #6f00fc);
+$gradient-page: linear-gradient(to right, #000 50%, #6f00fc);

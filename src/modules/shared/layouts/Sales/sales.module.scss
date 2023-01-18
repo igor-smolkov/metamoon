@@ -1,11 +1,20 @@
 @import 'shared/scss/variables.scss';
 
+@keyframes load {
+  from {
+    background-position: 0%;
+  }
+}
+
 .root {
   display: flex;
   flex-direction: column;
   width: 100%;
   min-height: 100%;
-  background: $gradient-page;
+  background-image: $gradient-page;
+  background-size: 200%;
+  background-position: 100%;
+  animation: load ease-out 1.5s;
 }
 
 .contentWrapper {
@@ -20,7 +29,7 @@
 }
 
 .progressBar {
-  padding: 40px 160px 120px;
+  padding: 40px 160px 100px;
 }
 
 .salesWrapper {
@@ -41,5 +50,5 @@
 }
 
 .ticker {
-  padding: 60px 0 94px;
+  padding: 54px 0;
 }
